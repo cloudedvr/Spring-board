@@ -1,0 +1,24 @@
+1. **Difference between `var` and `let`:**
+   - `var` is function-scoped, meaning it is visible within the function in which it is declared or globally if declared outside any function.
+   - `let` is block-scoped, meaning it is visible only within the block (enclosed by curly braces) in which it is declared.
+   - `var` can be redeclared within the same scope without an error.
+   - `let` cannot be redeclared within the same scope; redeclaration will result in an error.
+   - Variables declared with `var` are subject to hoisting (explained below).
+   - Variables declared with `let` are not hoisted.
+
+2. **Difference between `var` and `const`:**
+   - `var` allows for the variable's value to be reassigned.
+   - `const` declares a constant reference to a value, meaning the variable cannot be reassigned once it is initialized.
+   - Both `var` and `const` are function-scoped if declared within a function.
+   - `var` variables can be declared without initialization; they will be initialized with the value `undefined`.
+   - `const` variables must be initialized during declaration; otherwise, an error occurs.
+
+3. **Difference between `let` and `const`:**
+   - Both `let` and `const` are block-scoped.
+   - `let` allows the variable's value to be reassigned.
+   - `const` declares a constant reference to a value, meaning the variable cannot be reassigned after initialization.
+
+4. **Hoisting:**
+   - Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their containing scope during the compilation phase before the code is executed.
+   - Variables declared with `var` are hoisted, meaning they are accessible in their scope before they are declared, but their value is `undefined` until the assignment is reached.
+   - However, variables declared with `let` and `const` are not hoisted; they are not accessible before their declaration statement and will result in a ReferenceError if accessed beforehand.
